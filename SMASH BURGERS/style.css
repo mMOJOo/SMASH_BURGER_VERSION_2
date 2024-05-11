@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --main-color:#E93A3A;
+    --black-color:#040504;
+    --red-color:#D42020;
+    --white-color:#fff;
+    --gray-color:#fbf3df;
+    --border: 0.2rem solid rgba(255,255,255,0.5);
+}
+
+/*--------------------------------------------------------------------------------GENEL BÖLÜM-----------------------------------------------------------------------------------*/
+
+*{
+    font-family: "Poppins" , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all 0.5sn ease-in-out;
+}
+
+html{
+    font-size: 50%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------------------------BODY SECTION-----------------------------------------------------------------------------------*/
+
+body{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 4.2rem 7%;
+}
+
+/*--------------------------------------------------------------------------------HEADER BÖLÜMÜ-----------------------------------------------------------------------------------*/
+
+.header .logo img{
+    height: 125px;
+}
+
+.header{
+    background-color:rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    margin: 2rem 7%;
+    border-radius: 40rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a{
+    color: var(--black-color);
+    margin: 0 2.4rem ;
+    font-size: 3.2rem;
+    border-bottom: 0.1rem solid transparent;
+    text-shadow: var(--black-color);
+
+}
+
+.header .navbar .active,
+.header .navbar a:hover{
+    border-color:var(--red-color);
+    padding-bottom:0.8rem;
+}
+
+.header .buttons button{
+    cursor: pointer;
+    font-size: 3.9rem;
+    margin-left: 2.4rem;
+    background-color: transparent;
+}
+
+/*--------------------------------------------------------------------------------HOME BÖLÜMÜ-----------------------------------------------------------------------------------*/
+
+.home{
+   min-height: 100vh;
+   background: url(top-view-burger-fries-with-sauces-copy-space.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin-top: -20.1rem;
+   display: flex;
+   align-items: center;
+}
+
+.home .content{
+    max-width: 72rem;
+}
+
+.home .content h3{
+    font-size: 11.2rem;
+    color: var(--red-color);
+}
+
+.home .content p{
+    font-size: 3.2rem;
+    color: var(--white-color);
+    font-weight: 350;
+    line-height: 1.8;
+    padding: 1.4rem 0;
+}
+
+.btn{
+    margin-top: 1.3rem;
+    display: inline-block;
+    padding: 2.6rem 4.2rem;
+    border-radius: 36rem;
+    color:var(--white-color);
+    background-color:var(--red-color);
+    font-size: 2.8rem;
+    transition: transform 0.4s ease;
+}
+
+/*------------------------------------------------------------------------------MENÜ BÖLÜMÜ 2.SAYFA--------------------------------------------------------------------------------*/
+
+/*İKİ SAYFA ARASINA BOŞLUK ÇEKTİK*/
+.line-divider {
+    width: 100%;
+    height: 5px;
+    background-color: var(--white-color);
+    margin-top:0rem;
+    margin-bottom: 0rem; 
+}
+
+.menu {
+    background-image: url('3d-render-spotlights-grunge-brick-wall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu h1{
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: #fbf3df;
+    border-bottom: 3px solid var(--white-color);
+    text-transform: uppercase;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem, 1fr));
+    gap: 2.5rem;
+}
+
+.menu .box-container .box{
+    padding: 4rem;
+    margin-top: 3rem;
+    background-color: var(--gray-color);
+    border-radius: 3.8rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+    opacity: 0.95;
+    
+}
+
+
+.menu .box-container .box .box-head img{
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 3.8rem;
+}
+
+.menu .box-container .box .box-head:hover img{
+     transform: scale(1.05); 
+}
+
+.menu .box-container .box h3{
+    font-size: 4rem;
+    padding: 1.2rem 0;
+}
+
+.menu .box-container .box p{
+    font-size: 2rem;
+    text-transform: none;
+}
+
+.menu .box-container .box .box-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem; 
+}
+
+.menu .box-container .box .box-bottom .price p {
+    font-size: 5.6rem;
+    color: var(--black-color);
+    margin-left:10rem;
+}
+
+.btn:hover{
+    opacity: 0.75;
+    transform: scale(1.1);
+}
+
+/*-----------------------------------------------------------------------------ORDER BÖLÜMÜ 3.SAYFA--------------------------------------------------------------------------------*/
+
+.cart {
+    background-image: url('two-tasty-burgers-with-drink-onion-rings.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart h1 {
+    text-align: left;
+    font-size: 4rem;
+    font-weight: 800;
+    border-bottom: 3px solid var(--white-color);
+    text-transform: uppercase;
+}
+
+.cart .cart-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+}
+
+.cart .cart-items .checkout-form-container {
+    max-width: 50rem;
+}
+
+.cart .cart-items .checkout-form-container form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart .cart-items .checkout-form-container form label {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    flex: 0 0 100%; 
+}
+
+.cart .cart-items .checkout-form-container .box .box-head2{
+    color: var(--black-color);
+}
+
+.cart .cart-items .checkout-form-container form textarea,
+.cart .cart-items .checkout-form-container form input[type="text"] {
+    font-size: 3.2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-weight: 1000;
+    border-radius: 3.8rem;
+    border: 0.2rem solid var(--white-color);
+    background-color: transparent;
+    color: var(--black-color);
+    flex: 0 0 100%; 
+}
+
+.cart .cart-items .checkout-form-container form textarea::placeholder,
+.cart .cart-items .checkout-form-container form input[type="text"]::placeholder {
+    color: var(--white-color);
+}
+
+.cart .cart-items .checkout-form-container form button {
+    margin-top: 2rem;
+    padding: 1.5rem 3rem;
+    border-radius: 3.8rem;
+    font-size: 2.5rem; 
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 0 0 100%; 
+}
+
+.cart .cart-items .checkout-form-container form button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.cart .cart-items .checkout-form-container form #total {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    flex: 0 0 100%; 
+}
+
+#address, #note {
+    width: 101rem; 
+}
+
+#phone {
+    background-color: var(--white-color);
+}
+
+#address, #note, #phone {
+    opacity: 0.77;
+} 
+
+/*-----------------------------------------------------------------------------REVİEW BÖLÜMÜ 4.SAYFA--------------------------------------------------------------------------------*/
+
+.review h1{
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: #fbf3df;
+    border-bottom: 3px solid var(--white-color);
+    text-transform: uppercase;
+}
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem, 1fr));
+    gap:2rem;
+    opacity: 0.85;
+}
+
+.review .box-container .box{
+    margin-top: 4rem;
+    border: var(--white-color);
+    text-align: center;
+    padding: 2.8rem 2.2rem;
+    background-color:var(--gray-color);
+    border-radius:3.8rem ; 
+}
+
+.review .box-container .box p{
+    font-size: 1.7rem;
+    font-weight: 350;
+    line-height: 1.8;
+    padding: 1.4rem 0;
+    font-family: "Poppins" , sans-serif;
+    min-height: 20rem;
+    overflow: auto;
+    text-transform: none;
+}
+
+.review .box-container .box i{
+    font-size: 2.8rem;
+    align-items: center;
+    background-color: transparent;
+}
+
+.review .box-container .box h3{
+    font-size: 2.8rem;
+    align-items: center;
+}
+
+.review .box-container .box .stars i{
+    font-size: 3rem;
+    color: goldenrod;
+}
